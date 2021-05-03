@@ -4,7 +4,11 @@
 [[Paper]](http://reler.net/papers/guangrui_cvpr2021.pdf)
 
 
+### TO DO 
 
+- [X] Data-loading Module
+- [ ] Utils 
+- [ ] Trainer
 
 ### Prerequisites
 
