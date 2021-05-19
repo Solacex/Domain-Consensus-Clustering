@@ -7,7 +7,7 @@
 ### TO DO [within May]
 
 - [X] Data-loading Module
-- [ ] Utils
+- [X] Utils
 - [ ] Config Module 
 - [ ] Trainer
 
