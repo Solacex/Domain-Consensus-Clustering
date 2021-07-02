@@ -8,8 +8,10 @@
 
 - [X] Data-loading Module
 - [X] Utils
-- [ ] Config Module 
+- [X] Models 
+- [X] Config Module 
 - [ ] Trainer
+
 
 ### Prerequisites
 
