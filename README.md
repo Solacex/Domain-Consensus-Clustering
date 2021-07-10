@@ -65,8 +65,6 @@ CUDA_VISIBLE_DEVICES=0 python office_run.py note=EXP_NAME setting=uda/osda/pda t
 ```
 
 
-The final results (including the best and the last) will be saved in the ./snapshot/EXP_NAME/result.txt
-
 
 Train on OfficeHome: 
 ```
@@ -77,6 +75,7 @@ or
 CUDA_VISIBLE_DEVICES=0 python officehome_run.py note=EXP_NAME setting=uda/osda/pda transfer_all=1 
 ```
 
+The final results (including the best and the last) will be saved in the ./snapshot/EXP_NAME/result.txt. 
 Notably, transfer_all wil consumes more shared memory. 
 
 
