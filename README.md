@@ -31,14 +31,53 @@ pip install -r requirements.txt
 
 Download the dataset: Office-31, OfficeHome, VisDA, DomainNet. 
 
+Data Folder structure: 
+```
+Your dataset DIR:
+|-Office/domain_adaptation_images
+| |-amazon
+| |-webcam
+| |-dslr
+|-OfficeHome
+| |-Art
+| |-Product
+| |-...
+|-VisDA
+| |-train
+| |-validataion
+|-DomainNet
+| |-clipart
+| |-painting
+| |-...
+```
+You need you modify the data_path in config files, i.e., config.root
+
 ## Training
 
-TO DO
+Train on one transfer of Office: 
+```
+CUDA_VISIBLE_DEVICES=0 python office_run.py note=EXP_NAME setting=uda/osda/pda source=amazon target=dslr
+```
 
-## Evaluation
+To train on six transfers of Office:
+```
+CUDA_VISIBLE_DEVICES=0 python office_run.py note=EXP_NAME setting=uda/osda/pda transfer_all=1
+```
 
-TO DO
 
+The final results (including the best and the last) will be saved in the ./snapshot/EXP_NAME/result.txt
+
+
+Train on OfficeHome: 
+```
+CUDA_VISIBLE_DEVICES=0 python officehome_run.py note=EXP_NAME setting=uda/osda/pda source=Art target=Product
+```
+or 
+```
+CUDA_VISIBLE_DEVICES=0 python officehome_run.py note=EXP_NAME setting=uda/osda/pda transfer_all=1 
+```
+
+Notably, transfer_all wil consumes more shared memory. 
 
 
 ## Citation 
