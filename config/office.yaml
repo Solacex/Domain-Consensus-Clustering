@@ -1,0 +1,71 @@
+###reproducibility
+fix_seed: True
+
+###model setting
+train: True
+fix_bn: True
+multi_gpu: False
+model: res50
+init_weight: None
+pretrained: True
+extra: False
+bottleneck: True
+
+transfer_all: False
+trainer: 'dcc'
+version: 1
+setting: uda
+### Optimizer
+lr: 0.0001
+momentum: 0.9 
+weight_decay: 0.0005
+power: 0.75 
+gamma: 10
+num_steps: 10000
+stop_steps: 3000
+stage_size: 200
+warmup_steps: 400
+warmup: False
+####dataloader
+num_workers: 2
+batch_size: 36
+num_pclass: 3
+num_sample: 10
+task: office
+source: amazon 
+target: dslr 
+
+### Stopping criteria for clustering searching 
+interval: 2 
+max_search: 3
+drop_stop: True
+drop: 4
+drop_con: True
+search_stop: True
+
+### Hyper Parameter
+t: 0.1
+lamb: 0.1  
+gm: 3 # gamma for weight of regularizer
+prior: False
+k_converge: True
+
+
+### Checkpoint
+note: train
+snapshot: './snapshot'
+
+
+### Visualization
+tensorboard: False
+screen: False
+neptune: False
+val_freq: 100
+save_freq: 2000
+print_freq: 1
+
+root: {
+        office: /home/guangrui/data/office, 
+        officehome:  /home/guangrui/data/office_home,
+        visda: /home/guangrui/data/visda
+        }
