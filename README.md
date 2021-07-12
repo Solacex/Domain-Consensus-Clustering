@@ -4,15 +4,6 @@
 [[Paper]](http://reler.net/papers/guangrui_cvpr2021.pdf)
 
 
-### TO DO [within June]
-
-- [X] Data-loading Module
-- [X] Utils
-- [X] Models 
-- [X] Config Module 
-- [ ] Trainer
-
-
 ### Prerequisites
 
 To install requirements:
@@ -76,6 +67,7 @@ CUDA_VISIBLE_DEVICES=0 python officehome_run.py note=EXP_NAME setting=uda/osda/p
 ```
 
 The final results (including the best and the last) will be saved in the ./snapshot/EXP_NAME/result.txt. 
+
 Notably, transfer_all wil consumes more shared memory. 
 
 
