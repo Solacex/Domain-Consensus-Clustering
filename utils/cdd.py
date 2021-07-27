@@ -1,6 +1,11 @@
 from torch import nn
-from .dist  import to_cuda
 import torch
+
+
+def to_cuda(x):
+    if torch.cuda.is_available():
+        x = x.cuda()
+    return x
 
 class CDD(object):
     def __init__(self, num_layers, kernel_num, kernel_mul, 
