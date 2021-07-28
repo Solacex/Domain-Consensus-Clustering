@@ -2,7 +2,7 @@ from .base_trainer import *
 from model import *
 from dataset import *
 import sklearn
-from utils.memory import Memory
+from utils.joint_memory import Memory
 
 def ExpWeight(step, gamma=3, max_iter=5000, reverse=False):
     step = max_iter-step
